@@ -39,9 +39,8 @@ class PrimeForm extends React.Component {
       if (number < 2) return false;
       if (number % 2 == 0) return (number == 2);
       const sqrt = Math.sqrt(number);
-      var i;
-      for (i = 3; i <= sqrt; i += 2)
-      {
+      // var i;
+      for (let i = 3; i <= sqrt; i += 2) {
           if (number % i == 0) return false;
       }
       return true;
@@ -54,24 +53,25 @@ class PrimeForm extends React.Component {
       return oddNumber
     }
 
+    // Find prime < input number
     function calcPrime(number) {
-      var num = parseInt(number)
+      var num = parseInt(number);
 
-      if ((num == 0) || (num == 1)) {
-        return 'No prime found.'
-      }
-
-      if (num > Number.MAX_SAFE_INTEGER) {
-        return 'Input a number less than 2^53 - 1'
-      }
-
-      if (!Number(num) || (num < 0)) {
+      if (num < 0) {
         alert('Please input a positive integer!');
         return ''
       }
 
-      if (isPrime(num)) {
-        return num
+      if ((num == 0) || (num == 1) || (num == 2)) {
+        return 'None'
+      }
+
+      if (num == 3) {
+        return '2'
+      }
+
+      if (num > Number.MAX_SAFE_INTEGER) {
+        return 'Input a number less than 2^53 - 1'
       }
       
       if (num % 2 == 0) {
@@ -82,6 +82,7 @@ class PrimeForm extends React.Component {
           return findPrimeLoop(num)
         }
       } else {
+        if (isPrime(num)) num -= 2;
         return findPrimeLoop(num)
       }
 
@@ -90,7 +91,7 @@ class PrimeForm extends React.Component {
       // Freezing browser
       // Failsafe -1 0 1 2 2.2 10e4(99991)
 
-      // https://stackoverflow.com/questions/3885817/how-do-i-check-that-a-number-is-float-or-integer
+      // Sieve: https://www.geeksforgeeks.org/nearest-prime-less-given-number-n/
       // https://stackoverflow.com/questions/3885817/how-do-i-check-that-a-number-is-float-or-integer/20779354#20779354
 
       // Number.MAX_SAFE_INTEGER: (2^53 - 1) = 9,007,199,254,740,992 / 9007199254740992
@@ -106,6 +107,35 @@ class PrimeForm extends React.Component {
       // Number.isInteger(-Infinity) //false
       // Number.isInteger(0 / 0) //false
     }
+
+    // // Find prime <= input number
+    // function calcPrime(number) {
+    //   var num = parseInt(number)
+
+    //   if (num < 0) {
+    //     alert('Please input a positive integer!');
+    //     return ''
+    //   }
+
+    //   if ((num == 0) || (num == 1) || (num == 2)) {
+    //     return 'None'
+    //   }
+
+    //   if (num > Number.MAX_SAFE_INTEGER) {
+    //     return 'Input a number less than 2^53 - 1'
+    //   }
+      
+    //   if (num % 2 == 0) {
+    //     num -= 1;
+    //     if (isPrime(num)) {
+    //       return num
+    //     } else {
+    //       return findPrimeLoop(num)
+    //     }
+    //   } else {
+    //     return findPrimeLoop(num)
+    //   }
+    // }
 
     this.setState({
       answer: calcPrime(num)
