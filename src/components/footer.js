@@ -20,7 +20,7 @@ const Footer = () => (
                         <img src={imgSnapSeed} width="32" alt="Landing Page Logo"/>
                         <span class="h4 text-white mb-0 ml-3">Powered by Nambk</span>
                     </div>
-                    <p class="text-white">A brand new journey to the beautiful angles of this world.</p>
+                    <p class="text-white">A brand new journey to the beautiful angles of this world. Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p>
 
                     <div class="d-flex align-items-center">
                         <a class="btn btn-xss btn-soft-light mr-2" href="/settings">

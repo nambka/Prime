@@ -37,12 +37,12 @@ class PrimeForm extends React.Component {
 
     function isPrime(number) {
       if (number < 2) return false;
-      if (number % 2 === 0) return (number === 2);
+      if (number % 2 == 0) return (number == 2);
       const sqrt = Math.sqrt(number);
       var i;
       for (i = 3; i <= sqrt; i += 2)
       {
-          if (number % i === 0) return false;
+          if (number % i == 0) return false;
       }
       return true;
     }
@@ -55,32 +55,34 @@ class PrimeForm extends React.Component {
     }
 
     function calcPrime(number) {
-      if ((number === 0) || (number === 1)) {
+      var num = parseInt(number)
+
+      if ((num == 0) || (num == 1)) {
         return 'No prime found.'
       }
 
-      if (number > Number.MAX_SAFE_INTEGER) {
+      if (num > Number.MAX_SAFE_INTEGER) {
         return 'Input a number less than 2^53 - 1'
       }
 
-      if (!Number(number) || (number < 0)) {
+      if (!Number(num) || (num < 0)) {
         alert('Please input a positive integer!');
         return ''
       }
 
-      if (isPrime(number)) {
-        return number
+      if (isPrime(num)) {
+        return num
       }
       
-      if (number % 2 === 0) {
-        number -= 1;
-        if (isPrime(number)) {
-          return number
+      if (num % 2 == 0) {
+        num -= 1;
+        if (isPrime(num)) {
+          return num
         } else {
-          return findPrimeLoop(number)
+          return findPrimeLoop(num)
         }
       } else {
-        return findPrimeLoop(number)
+        return findPrimeLoop(num)
       }
 
 
