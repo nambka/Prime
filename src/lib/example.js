@@ -23,3 +23,9 @@ var All3 = function (){
 }
 
 export default All3;
+
+
+
+
+// References:
+// Sieve of Eratosthenes: https://www.geeksforgeeks.org/sieve-of-eratosthenes/
