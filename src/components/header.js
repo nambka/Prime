@@ -3,13 +3,13 @@ import imgLogo from '../assets/images/logo.png';
 
 import { ThemeProvider } from 'styled-components';
 import themes, {useDarkMode} from '../service/theme';
-import GlobalStyles from './global';
+import GlobalStyle from '../service/theme/global';
 
 const Header = () => {
   const [theme, toggleTheme] = useDarkMode();
   return (
   <ThemeProvider theme={theme === 'light' ? themes.lightTheme : themes.darkTheme}>
-    <GlobalStyles />
+    <GlobalStyle />
     <nav id="ac-localnav" className="js touch css-sticky ac-ln-sticking" lang="en-US" dir="ltr" role="navigation" aria-label="Local">
         <div className="ac-ln-wrapper">
             <div className="ac-ln-background"></div>
@@ -45,8 +45,7 @@ const Header = () => {
                         </div>
                         <div className="ac-ln-action ac-ln-action-button">
                             <a className="ac-ln-button" href="/nambk">Login </a>
-                            <a className="ac-ln-button" onClick={toggleTheme}><i className="fa fa-moon"></i></a>
-                            <a className="btn btn-sm btn-icon btn-soft-light" onClick={toggleTheme}><i className="fa fa-sun-o"></i></a>
+                            <button className="btn btn-sm btn-icon btn-soft-light" onClick={toggleTheme}>&nbsp;&nbsp;O<i className="fas fa-moon"></i></button>
                         </div>
                     </div>
                 </div>

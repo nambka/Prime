@@ -1,8 +1,8 @@
 import { createGlobalStyle } from 'styled-components';
 import styled from 'styled-components';
-import themes from '../service/theme'
+import themes from '../theme'
 
-const GlobalStyles = createGlobalStyle`
+const GlobalStyle = createGlobalStyle`
   *,
   *::after,
   *::before {
@@ -23,12 +23,12 @@ const GlobalStyles = createGlobalStyle`
     transition: all 0.25s linear;
   }
 `  
-export default GlobalStyles;
+export default GlobalStyle;
 
 
 
 
-export const ButtonWrapper = styled.div`
+export const ButtonWrapper = styled.button`
   .btn {
     /* Sử dụng fontWeightBold, fontSizeMedium , borderRadiusMedium từ _variables.js */
     font-weight: ${themes.fontWeightBold};

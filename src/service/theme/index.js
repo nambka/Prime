@@ -1,12 +1,25 @@
 import _mixins from './abstracts/_mixins'
 import _variables from './abstracts/_variables'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export const useDarkMode = () => {
-    const [theme, setTheme] = useState('light');
+    const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
     const toggleTheme = () => {
-      theme === 'light' ? setTheme('dark') : setTheme('light')
-    }
+      // theme === 'light' ? setTheme('dark') : setTheme('light')
+      if (theme === 'light') {
+        localStorage.setItem('theme', 'dark');
+        setTheme('dark');
+      } else {
+        localStorage.setItem('theme', 'light');
+        setTheme('light');
+      }
+    };
+
+    useEffect(() => {
+      const localTheme = window.localStorage.getItem('theme');
+      localTheme && setTheme(localTheme);
+    }, []);
+    
     return [theme, toggleTheme];
 };
 
