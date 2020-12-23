@@ -19,7 +19,6 @@ class PrimeForm extends React.Component {
   }
 
   handleSubmit(e) {
-    // alert('Submitted data: ' + this.state.inputNum);
     e.preventDefault();
     const num = this.state.inputNum
     
@@ -39,7 +38,6 @@ class PrimeForm extends React.Component {
       if (number < 2) return false;
       if (number % 2 == 0) return (number == 2);
       const sqrt = Math.sqrt(number);
-      // var i;
       for (let i = 3; i <= sqrt; i += 2) {
           if (number % i == 0) return false;
       }
@@ -138,8 +136,8 @@ class PrimeForm extends React.Component {
     // }
 
     this.setState({
-      answer: calcPrime(num)
-    })    
+      answer: calcPrime(num),
+    });  
   }
 
   render() {
@@ -148,13 +146,19 @@ class PrimeForm extends React.Component {
         <h2 className="nambk-header">Prime Finder</h2>
         <div className="nambk-header-desc">Highest Prime Number lower than the Input Number</div>
 
-        <label>Input a number:
-          <input type="number" value={this.state.inputNum} onChange={this.handleChange} placeholder="Enter a number"/>
-        </label>
-        <input type="submit" value="Go"/><br/>
-        <label>Highest prime #:
-          <input type="text" value={this.state.answer} readOnly />   
-        </label>
+        <input type="number" value={this.state.inputNum} onChange={this.handleChange} placeholder="Enter a number"/>
+        <input type="submit" value="Go"/>
+        <div className="mt-3" readOnly style={{
+            backgroundColor: '#cde2', 
+            padding: '5px 10px', 
+            width: '100%', 
+            flex: '1', 
+            boxSizing: 'border-box',
+            minHeight: '30px', 
+            borderRadius: '7px', 
+          }}>
+          {this.state.answer}  
+        </div>   
       </form>
     );
   }
