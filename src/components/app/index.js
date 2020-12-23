@@ -1,6 +1,5 @@
 import '../../assets/css/nav.css';
 import '../../assets/css/style.css';
-import '../../assets/css/theme.css';
 import Header from '../header';
 import Footer from '../footer';
 import PrimeForm from '../../lib/PrimeForm';
