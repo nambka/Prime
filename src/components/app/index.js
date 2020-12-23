@@ -6,15 +6,11 @@ import Footer from '../footer';
 import PrimeForm from '../../lib/PrimeForm';
 
 import { ThemeProvider } from 'styled-components';
-import themes from '../../service/theme';
+import themes, {useDarkMode} from '../../service/theme';
 import GlobalStyles from '../global';
 
 const App = () => {
-  const [theme, setTheme] = useState('light');
-  const toggleTheme = () => {
-    theme === 'light' ? setTheme('dark') : setTheme('light')
-  }
-  
+  const [theme, toggleTheme] = useDarkMode();
   return (
   <div>
     <ThemeProvider theme={theme === 'light' ? themes.lightTheme : themes.darkTheme}>
