@@ -1,4 +1,5 @@
 import React from 'react';
+import {ButtonWrapper} from '../components/global';
 
 // Render the input form to enter a number
 class PrimeForm extends React.Component {
@@ -145,13 +146,15 @@ class PrimeForm extends React.Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-        <label>In put a number:
-          <input type="number" value={this.state.inputNum} onChange={this.handleChange} placeholder="Enter a number"/>
-        </label>
-        <input type="submit" value="Find Prime" /><br/>
-        <label>Highest prime #:
-          <input type="text" value={this.state.answer} readOnly />   
-        </label>
+        <ButtonWrapper>
+          <label>In put a number:
+            <input type="number" value={this.state.inputNum} onChange={this.handleChange} placeholder="Enter a number"/>
+          </label>
+          <button type="submit">Find Prime </button><br/>
+          <label>Highest prime #:
+            <input type="text" value={this.state.answer} readOnly />   
+          </label>
+        </ButtonWrapper>
       </form>
     );
   }
