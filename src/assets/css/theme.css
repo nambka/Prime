@@ -120,7 +120,7 @@ body.dark-mode #push {
 
 
 .gradient-half-primary-body-v1 {
-    background-image: linear-gradient(150deg,#19a0ff,#2d1582);
+    /* background-image: linear-gradient(150deg,#19a0ff,#2d1582); */
     background-repeat: repeat-x;
 }
 
@@ -316,7 +316,7 @@ main {
 }
 
 p {
-    color: #6c757e;
+    /* color: #6c757e; */
     line-height: 1.7;
 }
 

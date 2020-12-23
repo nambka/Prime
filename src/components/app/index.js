@@ -9,9 +9,10 @@ const App = () => {
   return (
   <div>
     <Header />
-    <h2>Prime Finder</h2>
-    <h5>Find the Highest Prime Number lower than the Input Number</h5>
-    <PrimeForm />
+    <div className="container-fluid text-center">
+      <PrimeForm />
+      <PrimeForm />
+    </div>
     <Footer />
   </div>
   );

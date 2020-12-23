@@ -4,7 +4,8 @@ import imgSnapSeed from '../assets/images/snapseed256.png';
 
 const Footer = () => {
   return (
-    <footer className="gradient-half-primary-body-v1 py-4">
+    <footer className="gradient-half-primary-body-v1 py-4"
+        style={{height: 'calc(100% - 60px)',}}> 
         <div className="container">
             <div className="row justify-content-md-between font-size-1 py-3" 
                 style={{
@@ -19,9 +20,9 @@ const Footer = () => {
                     <div className="d-flex h-100 flex-column">
                         <div className="d-flex align-items-center mb-4">
                             <img src={imgSnapSeed} width="32" alt="Landing Page Logo"/>
-                            <span className="h4 text-white mb-0 ml-3">Powered by Nambk</span>
+                            <span className="h4 mb-0 ml-3">Powered by Nambk</span>
                         </div>
-                        <p className="text-white">A brand new journey to the beautiful angles of this world. Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p>
+                        <p className="">A brand new journey to the beautiful angles of this world. Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p>
 
                         <div className="d-flex align-items-center">
                             <a className="btn btn-xss btn-soft-light mr-2" href="/settings">
