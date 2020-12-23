@@ -24,31 +24,3 @@ const GlobalStyle = createGlobalStyle`
   }
 `  
 export default GlobalStyle;
-
-
-
-
-export const ButtonWrapper = styled.button`
-  .btn {
-    /* Sử dụng fontWeightBold, fontSizeMedium , borderRadiusMedium từ _variables.js */
-    font-weight: ${themes.fontWeightBold};
-    font-size: ${themes.fontSizeMedium};
-    line-height: 1.5;
-    border-radius: ${themes.borderRadiusLarge};
-    padding: .375rem .75rem;
-  }
-
-  .btn-primary {
-    /* Sử dụng blue, white từ _variables.js */
-    background: ${themes.blue};
-    color: ${themes.white};
-    /* Sử dụng transitionFade từ _mixin.js */
-    ${themes.transitionFade()}
-  }
-
-  .btn-secondary {
-    background: ${themes.grey};
-    color: ${themes.white};
-    ${themes.transitionFade()}
-  }
-`

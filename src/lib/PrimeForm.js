@@ -1,5 +1,4 @@
 import React from 'react';
-// import {ButtonWrapper} from '../service/theme/global';
 
 // Render the input form to enter a number
 class PrimeForm extends React.Component {
