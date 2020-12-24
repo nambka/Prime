@@ -55,9 +55,9 @@ class PrimesForm extends React.Component {
         <h2 className="nambk-header">Prime Numbers</h2>
         <div className="nambk-header-desc">Between Two Numbers</div>
         <div>
-          <input style={{width: '33%'}} type="number" min="1" max="9999999" value={this.state.inputFirstNum} onChange={this.handleChange} id="inputFirstNum" name="inputFirstNum" placeholder="Enter a number"/>
-          <input style={{width: '33%'}} type="number" min="1" max="9999999" value={this.state.inputLastNum} onChange={this.handleChange} id="inputLastNum" name="inputLastNum" placeholder="Enter a number"/>
-          <input type="submit" value="Go"/>
+          <input className="nambk-input" style={{width: '33%'}} type="number" min="1" max="9999999" value={this.state.inputFirstNum} onChange={this.handleChange} id="inputFirstNum" name="inputFirstNum" placeholder="Enter a number"/>
+          <input className="nambk-input" style={{width: '33%'}} type="number" min="1" max="9999999" value={this.state.inputLastNum} onChange={this.handleChange} id="inputLastNum" name="inputLastNum" placeholder="Enter a number"/>
+          <input className="nambk-btn nambk-btn-primary" type="submit" value="Go"/>
         </div>
         <div id="result" className="mt-3" style={{minHeight: '60px',}}>
           {this.state.answer.join(', ')}

@@ -78,7 +78,8 @@ img {
   box-sizing: border-box;
   border-radius: 5px;
 }
-  
+
+/* Form elements */
 .nambk-header {
   width: 100%;
   font-family: Arial, sans-serif;
@@ -113,6 +114,34 @@ img {
 }
 
 
+/* Input box style */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.nambk-input {
+  /* position: relative; */
+  height: 2rem;
+  border: 1px solid #E6E8EA;
+  border-radius: 4px;
+  padding: 0 8px 2px 8px;
+  margin-right: 10px;
+}
+.nambk-input:hover {
+  border-color: #F0B90B;
+  /* border-color: #00c087; */
+}
+
+.nambk-input:focus {
+  outline: 0px;
+}
+
+
 /* Nambk button styles */
 .nambk-btn.nambk-btn-primary {
   color: #212833;
@@ -127,6 +156,8 @@ img {
   box-shadow: 0 10px 20px 0 rgba(240,185,10,.3);
 }
 .nambk-btn {
+  height: 2rem;
+  min-width: 60px;
   display: inline-block;
   text-align: center;
   white-space: nowrap;
