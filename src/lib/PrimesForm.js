@@ -29,16 +29,16 @@ class PrimesForm extends React.Component {
     function sieve(limit, initial) {
       var bools = [];
       var primes = [];
-      for (var i = 1; i < limit; i++) { bools.push(true); }
-      for (var i = 1; i <= Math.sqrt(limit); i++) {
+      for (let i = 1; i < limit; i++) { bools.push(true); }
+      for (let i = 1; i <= Math.sqrt(limit); i++) {
         if (bools[i-2]) {
-          for (var j = i*2; j <= limit; j += i) {
+          for (let j = i*2; j <= limit; j += i) {
             bools[j-2] = false;
           }
         }
       }
-      for (var i = 0; i < initial-2; i++) { bools[i] = false; }
-      for (var p = 0; p < bools.length; p++) {
+      for (let i = 0; i < initial-2; i++) { bools[i] = false; }
+      for (let p = 0; p < bools.length; p++) {
         if (bools[p]) { primes.push(p+2); }
       }
       return primes.length === 0 ? ['None in Range'] : primes

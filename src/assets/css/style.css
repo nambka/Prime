@@ -8,12 +8,6 @@ body {
   font-family: DINNext, sans-serif !important;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  margin-top: 0;
-  margin-bottom: .5em;
-  font-weight: 500;
-}
-
 .font-size-0-75 {
   font-size: .75rem;
 }
@@ -96,9 +90,8 @@ img {
 .nambk-container-input {
   position: relative;
   background: #fff;
-  box-shadow: rgba(0,0,0,0.1) 0 5px 30px 0;
+  /* box-shadow: rgba(0,0,0,0.1) 0 5px 30px 0; */
   border-radius: 10px;
-  border: 1px solid #eaecef22;
   padding: 35px 40px;
 
   font-size: 0.85rem;

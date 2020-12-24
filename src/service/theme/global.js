@@ -21,12 +21,14 @@ const GlobalStyle = createGlobalStyle`
 
   form {
     background-color: ${({ theme }) => theme.formBkg};
+    border: ${({ theme }) => theme.formBorder};
     box-shadow: ${({ theme }) => theme.formBoxShadow};
     transition: ${({ theme }) => theme.formTransition};
   }
 
   form:hover {
     background-color: ${({ theme }) => theme.formBkgHover};
+    border: ${({ theme }) => theme.formBorder};
     box-shadow: ${({ theme }) => theme.formBoxShadowHover};
     transition: ${({ theme }) => theme.formTransitionHover};
   }
