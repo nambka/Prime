@@ -59,15 +59,7 @@ class PrimesForm extends React.Component {
           <input style={{width: '33%'}} type="number" min="1" max="9999999" value={this.state.inputLastNum} onChange={this.handleChange} id="inputLastNum" name="inputLastNum" placeholder="Enter a number"/>
           <input type="submit" value="Go"/>
         </div>
-        <div id="result" className="mt-3" style={{
-            backgroundColor: '#ccd2', 
-            padding: '5px 10px', 
-            width: '100%', 
-            flex: '1', 
-            boxSizing: 'border-box',
-            minHeight: '60px', 
-            borderRadius: '7px', 
-          }}>
+        <div id="result" className="mt-3" style={{minHeight: '60px',}}>
           {this.state.answer.join(', ')}
         </div>   
       </form>

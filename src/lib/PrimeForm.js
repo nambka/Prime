@@ -149,15 +149,7 @@ class PrimeForm extends React.Component {
           <input style={{width: '50%'}} type="number" value={this.state.inputNum} onChange={this.handleChange} placeholder="Enter a number"/>
           <input type="submit" value="Go"/>
         </div>
-        <div id="result" className="mt-3" readOnly style={{
-            backgroundColor: '#ccd2', 
-            padding: '5px 10px', 
-            width: '100%', 
-            flex: '1', 
-            boxSizing: 'border-box',
-            minHeight: '30px', 
-            borderRadius: '7px', 
-          }}>
+        <div id="result" className="mt-3" readOnly style={{minHeight: '30px',}}>
           {this.state.answer}  
         </div>   
       </form>

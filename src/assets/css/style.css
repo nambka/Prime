@@ -69,6 +69,15 @@ img {
   vertical-align: middle;
   border-style: none;
 }
+
+#result { 
+  background-color: #ccd2; 
+  padding: 5px 10px; 
+  width: 100%; 
+  flex: 1; 
+  box-sizing: border-box;
+  border-radius: 5px;
+}
   
 .nambk-header {
   width: 100%;
