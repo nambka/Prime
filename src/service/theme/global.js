@@ -33,6 +33,16 @@ const GlobalStyle = createGlobalStyle`
     transition: ${({ theme }) => theme.formTransitionHover};
   }
 
+  input[type=number] {
+    color: ${({ theme }) => theme.bodyTextColor};
+    background-color: ${({ theme }) => theme.inputBkg};
+    border: ${({ theme }) => theme.inputBorder};
+  }
+
+  input[type=number]:hover {
+    border-color: ${({ theme }) => theme.inputBorderHover};
+  }
+
   #result {
     box-shadow: ${({ theme }) => theme.resultBoxShadow};
   }

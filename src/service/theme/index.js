@@ -31,7 +31,6 @@ const themes = {
     bodyTextColor: '#353637',
     footerBkg: 'linear-gradient(150deg,#19a0ff,#2d1582)',
     footerTextColor: '#fff',
-    gradient: 'linear-gradient(#39598A, #79D7ED)',
 
     formBorder: '1px solid #eaecef22',
 
@@ -41,8 +40,12 @@ const themes = {
     formTransition: '.3s all ease',
 
     formBkgHover: '#fff',
-    formBoxShadowHover: '0 5px 10px 0 rgba(0,0,0,.1)',
+    formBoxShadowHover: '0 4px 8px 0 rgba(0,0,0,.1)',
     formTransitionHover: '.2s all ease',
+
+    inputBkg: '#fff3',
+    inputBorder: '1px solid #E6E8EA',
+    inputBorderHover: '#F0B90B',
 
     resultBoxShadow: 'inset 0 0 5px 0 rgba(0,0,0,.1)', 
   },
@@ -51,7 +54,6 @@ const themes = {
     bodyTextColor: '#a2b9c8',
     footerBkg: '#012137',
     footerTextColor: '#a2b9c8',
-    gradient: 'linear-gradient(#091236, #1E215D)',
 
     formBorder: '1px solid #18365b',
 
@@ -65,7 +67,11 @@ const themes = {
     formBoxShadowHover1: '0 0.5rem 1.2rem rgba(4,76,124,.2)',
     formTransitionHover: '.2s all ease',
     
-    resultBoxShadow: 'inset 0 0 5px 0 rgba(0,0,0,.3)',     
+    inputBkg: '#ccd2',
+    inputBorder: '1px solid #256',
+    inputBorderHover: '#2ac',
+
+    resultBoxShadow: 'inset 0 0 5px 0 rgba(0,0,0,.3)',
   }
 };
 export default themes;

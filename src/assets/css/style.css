@@ -125,16 +125,10 @@ input[type=number] {
 }
 
 .nambk-input {
-  /* position: relative; */
   height: 2rem;
-  border: 1px solid #E6E8EA;
   border-radius: 4px;
   padding: 0 8px 2px 8px;
   margin-right: 10px;
-}
-.nambk-input:hover {
-  border-color: #F0B90B;
-  /* border-color: #00c087; */
 }
 
 .nambk-input:focus {

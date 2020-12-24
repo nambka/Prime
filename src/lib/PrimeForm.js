@@ -149,7 +149,7 @@ class PrimeForm extends React.Component {
           <input className="nambk-input" style={{width: '50%'}} type="number" value={this.state.inputNum} onChange={this.handleChange} placeholder="Enter a number"/>
           <input className="nambk-btn nambk-btn-primary" type="submit" value="Go"/>
         </div>
-        <div id="result" className="mt-3" readOnly style={{minHeight: '30px',}}>
+        <div id="result" className="mt-3" readOnly style={{minHeight: '2rem',}}>
           {this.state.answer}  
         </div>   
       </form>
