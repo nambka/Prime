@@ -24,7 +24,7 @@
 #ac-localnav *:before,
 #ac-localnav *:after {
     font-size: 1em;
-    font-family: inherit;
+    /* font-family: inherit; */
     font-weight: inherit;
     line-height: inherit;
     text-align: inherit
