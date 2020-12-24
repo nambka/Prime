@@ -32,12 +32,16 @@ const themes = {
     footerBkg: 'linear-gradient(150deg,#19a0ff,#2d1582)',
     footerTextColor: '#fff',
     gradient: 'linear-gradient(#39598A, #79D7ED)',
-    formBkg: '#fff',
+
+    formBkg: '#fff!important',
     formBoxShadow: '0 2px 2px 0 rgba(0,0,0,.05)',
     formTransition: '.3s all ease',
+
     formBkgHover: '#fff',
     formBoxShadowHover: '0 5px 10px 0 rgba(0,0,0,.1)',
     formTransitionHover: '.2s all ease',
+
+    resultBoxShadow: 'inset 0 0 5px 0 rgba(0,0,0,.1)', 
   },
   darkTheme: {
     bodyBkg: '#01263f',
@@ -45,12 +49,16 @@ const themes = {
     footerBkg: '#012137',
     footerTextColor: '#a2b9c8',
     gradient: 'linear-gradient(#091236, #1E215D)',
+
     formBkg: '#012137 !important',
     formBoxShadow: '0 2px 2px 0 rgba(0,0,0,0.1)',
     formTransition: '.3s all ease',
-    formBkgHover: '#dadada11!important',
+
+    formBkgHover: '#bbb1!important',
     formBoxShadowHover: '2px 5px 10px 0 rgba(0,0,0,.3)',
     formTransitionHover: '.2s all ease',
+    
+    resultBoxShadow: 'inset 0 0 5px 0 rgba(0,0,0,.3)',     
   }
 };
 export default themes;

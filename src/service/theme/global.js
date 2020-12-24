@@ -30,5 +30,9 @@ const GlobalStyle = createGlobalStyle`
     box-shadow: ${({ theme }) => theme.formBoxShadowHover};
     transition: ${({ theme }) => theme.formTransitionHover};
   }
+
+  #result {
+    box-shadow: ${({ theme }) => theme.resultBoxShadow};
+  }
 `
 export default GlobalStyle;

@@ -6,7 +6,7 @@ class PrimesForm extends React.Component {
     super(props);
     this.state = {
       inputFirstNum: 1,
-      inputLastNum: 1000000,
+      inputLastNum: 1000,
       answer: ['Primes']
     };
     this.handleChange = this.handleChange.bind(this);
@@ -54,12 +54,13 @@ class PrimesForm extends React.Component {
       <form onSubmit={this.handleSubmit} className="container-fluid nambk-container-input">
         <h2 className="nambk-header">Prime Numbers</h2>
         <div className="nambk-header-desc">Between Two Numbers</div>
-
-        <input type="number" min="1" max="9999999" value={this.state.inputFirstNum} onChange={this.handleChange} id="inputFirstNum" name="inputFirstNum" placeholder="Enter a number"/>
-        <input type="number" min="1" max="9999999" value={this.state.inputLastNum} onChange={this.handleChange} id="inputLastNum" name="inputLastNum" placeholder="Enter a number"/>
-        <input type="submit" value="Go"/>
-        <div className="mt-3" style={{
-            backgroundColor: '#cde2', 
+        <div>
+          <input style={{width: '33%'}} type="number" min="1" max="9999999" value={this.state.inputFirstNum} onChange={this.handleChange} id="inputFirstNum" name="inputFirstNum" placeholder="Enter a number"/>
+          <input style={{width: '33%'}} type="number" min="1" max="9999999" value={this.state.inputLastNum} onChange={this.handleChange} id="inputLastNum" name="inputLastNum" placeholder="Enter a number"/>
+          <input type="submit" value="Go"/>
+        </div>
+        <div id="result" className="mt-3" style={{
+            backgroundColor: '#ccd2', 
             padding: '5px 10px', 
             width: '100%', 
             flex: '1', 
