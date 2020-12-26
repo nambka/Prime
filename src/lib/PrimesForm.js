@@ -9,9 +9,23 @@ class PrimesForm extends React.Component {
       inputLastNum: 1000,
       answer: ['Primes']
     };
+    // this.onFirstNumChange = this.onFirstNumChange.bind(this);
+    // this.onLastNumChange = this.onLastNumChange.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
+
+  // onFirstNumChange(e) {
+  //   this.setState({
+  //     inputFirstNum: e.target.value
+  //   })
+  // }
+
+  // onLastNumChange(e) {
+  //   this.setState({
+  //     inputLastNum: e.target.value
+  //   })
+  // }
 
   handleChange(e) {
     this.setState({
@@ -51,13 +65,20 @@ class PrimesForm extends React.Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit} className="container-fluid nambk-container-input">
+      <form id="frmFindPrimes" onSubmit={this.handleSubmit} className="container-fluid nambk-container-input">
         <h2 className="nambk-header">Prime Numbers</h2>
         <div className="nambk-header-desc">Between Two Numbers</div>
         <div>
-          <input className="nambk-input" style={{width: '33%'}} type="number" min="1" max="9999999" value={this.state.inputFirstNum} onChange={this.handleChange} id="inputFirstNum" name="inputFirstNum" placeholder="Enter a number"/>
-          <input className="nambk-input" style={{width: '33%'}} type="number" min="1" max="9999999" value={this.state.inputLastNum} onChange={this.handleChange} id="inputLastNum" name="inputLastNum" placeholder="Enter a number"/>
-          <input className="nambk-btn nambk-btn-primary" type="submit" value="Go"/>
+          <input className="nambk-input" style={{width: '33%'}} 
+                 type="number" min="1" max="9999999" 
+                 value={this.state.inputFirstNum} onChange={this.handleChange} 
+                 id="inputFirstNum" name="inputFirstNum" placeholder="Enter a number"/>
+          <input className="nambk-input" style={{width: '33%'}} 
+                 type="number" min="1" max="9999999" 
+                 value={this.state.inputLastNum} onChange={this.handleChange} 
+                 id="inputLastNum" name="inputLastNum" placeholder="Enter a number"/>
+          <input id="btnFindPrimes" className="nambk-btn nambk-btn-primary" 
+                 type="submit" value="Go"/>
         </div>
         <div id="result" className="mt-3" style={{minHeight: '4rem',}}>
           {this.state.answer.join(', ')}

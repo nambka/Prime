@@ -28,8 +28,8 @@ const Footer = () => {
                             <a className="btn btn-xss btn-soft-light mr-2" href="/settings">
                                 <i className="fa fa-cogs mr-1"></i>Preferences
                             </a>
-                            <button id="darkModaBtn" data-toggle="tooltip" data-title="Day/Night Mode" className="btn btn-sm btn-icon btn-soft-light" data-original-title="" title="">
-                                <i id="darkModaBtnIcon" className="fa fa-moon-o"></i></button>
+                            <button id="btnDarkMode" data-toggle="tooltip" data-title="Day/Night Mode" className="btn btn-sm btn-icon btn-soft-light" data-original-title="" title="">
+                                <i id="btnDarkMode" className="fa fa-moon-o"></i></button>
                         </div>
 
                     </div>

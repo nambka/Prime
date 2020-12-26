@@ -142,12 +142,15 @@ class PrimeForm extends React.Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit} className="container-fluid nambk-container-input text-center">
+      <form id="frmFindHighestPrime" onSubmit={this.handleSubmit} className="container-fluid nambk-container-input text-center">
         <h2 className="nambk-header">Prime Finder</h2>
         <div className="nambk-header-desc">Highest Prime Number lower than Input Number</div>
         <div>
-          <input className="nambk-input" style={{width: '50%'}} type="number" value={this.state.inputNum} onChange={this.handleChange} placeholder="Enter a number"/>
-          <input className="nambk-btn nambk-btn-primary" type="submit" value="Go"/>
+          <input id="inputNumber" name="inputNumber" className="nambk-input" style={{width: '50%'}} 
+                 type="number" value={this.state.inputNum} 
+                 onChange={this.handleChange} placeholder="Enter a number"/>
+          <input id="btnFindHighestPrime" className="nambk-btn nambk-btn-primary" 
+                 type="submit" value="Go"/>
         </div>
         <div id="result" className="mt-3" readOnly style={{minHeight: '2rem',}}>
           {this.state.answer}  

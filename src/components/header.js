@@ -45,7 +45,7 @@ const Header = () => {
                         </div>
                         <div className="ac-ln-action ac-ln-action-button">
                             <a className="ac-ln-button mr-3" href="/nambk">Login </a>
-                            <button className="btn btn-sm btn-icon btn-soft-light" onClick={toggleTheme}>
+                            <button id="btnDarkMode" className="btn btn-sm btn-icon btn-soft-light" onClick={toggleTheme}>
                                 &nbsp;&nbsp;<i className="fa fa-moon-o"></i></button>
                         </div>
                     </div>

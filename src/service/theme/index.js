@@ -35,12 +35,12 @@ const themes = {
     formBorder: '1px solid #eaecef22',
 
     formBkg: '#fff!important',
-    formBoxShadow0: '0 2px 2px 0 rgba(0,0,0,.05)',
-    formBoxShadow: '0 5px 30px 0 rgba(0,0,0,.1)',
+    // formBoxShadow: '0 2px 2px 0 rgba(0,0,0,.05)',
+    formBoxShadow: '0 5px 30px 0 rgba(0,0,0,.2)',
     formTransition: '.3s all ease',
 
     formBkgHover: '#fff',
-    formBoxShadowHover: '0 4px 8px 0 rgba(0,0,0,.1)',
+    formBoxShadowHover: '0 3px 10px 0 rgba(204,204,204,.8)',
     formTransitionHover: '.2s all ease',
 
     inputBkg: '#fff3',
@@ -58,13 +58,13 @@ const themes = {
     formBorder: '1px solid #18365b',
 
     formBkg: '#012137!important',
-    formBoxShadow0: '0 2px 2px 0 rgba(0,0,0,0.1)',
+    // formBoxShadow: '0 2px 2px 0 rgba(0,0,0,.1)',
     formBoxShadow: '0 0.5rem 1.2rem rgba(4,76,124,.2)',
     formTransition: '.3s all ease',
 
     formBkgHover: '#bbb1!important',
     formBoxShadowHover: '2px 5px 10px 0 rgba(0,0,0,.3)',
-    formBoxShadowHover1: '0 0.5rem 1.2rem rgba(4,76,124,.2)',
+    // formBoxShadowHover: '0 0.5rem 1.2rem rgba(4,76,124,.2)',
     formTransitionHover: '.2s all ease',
     
     inputBkg: '#ccd2',
@@ -72,6 +72,7 @@ const themes = {
     inputBorderHover: '#2ac',
 
     resultBoxShadow: 'inset 0 0 5px 0 rgba(0,0,0,.3)',
+    // resultBoxShadow: 'inset 0 0 10px #ddd;',
   }
 };
 export default themes;
