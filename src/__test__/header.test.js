@@ -8,7 +8,7 @@ describe('Header: ', () => {
   });
 
   afterEach(() => {
-    document.getElementsByTagName('html')[0].innerHTML = '';
+    // document.getElementsByTagName('html')[0].innerHTML = '';
     jest.resetModules();
     // wrapper.unmount();
   });

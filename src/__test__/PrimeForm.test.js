@@ -9,7 +9,7 @@ describe('PrimeForm: ', () => {
     });
 
     afterEach(() => {
-        document.getElementsByTagName('html')[0].innerHTML = '';
+        // document.getElementsByTagName('html')[0].innerHTML = '';
         jest.resetModules();
         jest.resetAllMocks();
         // wrapper.unmount();

@@ -7,15 +7,7 @@ const Footer = () => {
     <footer className="gradient-half-primary-body-v1 py-4"
         style={{height: 'calc(100% - 60px)',}}> 
         <div className="container">
-            <div className="row justify-content-md-between font-size-1 py-3" 
-                style={{
-                    // backgroundImage: "url(" + imgWorldMap + ")",
-                    backgroundImage: `url(${imgWorldMap})`,
-                    backgroundRepeat: 'no-repeat',
-                    // backgroundSize: 'cover',
-                    backgroundPositionX: '0px',
-                    backgroundPositionY: '30%'
-                }}>
+            <div className="row justify-content-md-between font-size-1 py-3">
                 <div className="col-lg-3 mb-4 mb-lg-0">
                     <div className="d-flex h-100 flex-column">
                         <div className="d-flex align-items-center mb-4">

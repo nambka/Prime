@@ -8,6 +8,12 @@ body {
   font-family: DINNext, sans-serif !important;
 }
 
+footer div.row {
+  background: url(../images/world-map-white.png);
+  background-repeat: no-repeat;
+  background-position: 0 30%;
+}
+
 .font-size-0-75 {
   font-size: .75rem;
 }

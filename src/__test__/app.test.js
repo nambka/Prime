@@ -21,10 +21,4 @@ describe('App:', () => {
     // console.log(wrapper.debug());
   });
 
-  it('snapshot renders', () => {
-    const component = TestRenderer.create(<App />);
-    let tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-});
-
 });
