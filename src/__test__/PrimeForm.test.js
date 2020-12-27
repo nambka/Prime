@@ -1,6 +1,6 @@
 import React from 'react';
 import { fireEvent, render, screen } from "@testing-library/react";
-import PrimeForm from '../../lib/PrimeForm';
+import PrimeForm from '../lib/PrimeForm';
 import { shallow, mount } from 'enzyme';
 
 describe('PrimeForm: ', () => {
@@ -21,16 +21,19 @@ describe('PrimeForm: ', () => {
         expect(wrapper.find('#inputNumber').length).toEqual(1);
         expect(wrapper.find('#btnFindHighestPrime').length).toEqual(1);
         expect(wrapper.find('#result').length).toEqual(1);
+        expect(wrapper).toMatchSnapshot();
     });
 
     it('has a title of "Prime Finder"', () => {
         const wrapper = shallow(<PrimeForm />);
         expect(wrapper.find("h2").text()).toBe("Highest Prime");
+        expect(wrapper).toMatchSnapshot();
     });
 
     it('renders one form component', () => {
       const wrapper = shallow(<PrimeForm />);
       expect(wrapper.find('#frmFindHighestPrime')).toHaveLength(1);
+      expect(wrapper).toMatchSnapshot();
     });
 
 

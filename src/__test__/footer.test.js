@@ -1,5 +1,5 @@
 import React from 'react';
-import Footer from '../footer';
+import Footer from '../components/footer';
 import { shallow, mount } from 'enzyme';
 
 describe('Footer', () => {
@@ -18,6 +18,7 @@ describe('Footer', () => {
     expect(wrapper.find('div.container').length).toEqual(1);
     expect(wrapper.find('span.h5').length).toEqual(1);
     expect(wrapper.find('#btnDarkMode').length).toEqual(1);
+    expect(wrapper).toMatchSnapshot();
   })
 
   // Ref: https://stackoverflow.com/questions/43747397/simulate-a-button-click-in-jest

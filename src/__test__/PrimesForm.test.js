@@ -1,5 +1,5 @@
 import React from 'react';
-import PrimesForm from '../../lib/PrimesForm';
+import PrimesForm from '../lib/PrimesForm';
 import { shallow, mount } from 'enzyme';
 
 describe('PrimesForm: ', () => {
@@ -10,16 +10,19 @@ describe('PrimesForm: ', () => {
         expect(wrapper.find('#inputLastNum').length).toEqual(1);
         expect(wrapper.find('#btnFindPrimes').length).toEqual(1);
         expect(wrapper.find('#result').length).toEqual(1);
+        expect(wrapper).toMatchSnapshot();
     })
 
     it('has a title of "Prime Numbers"', () => {
         const wrapper = shallow(<PrimesForm />);
         expect(wrapper.find("h2").text()).toBe("Prime Numbers");
+        expect(wrapper).toMatchSnapshot();
     });
 
     it('renders one form component', () => {
       const wrapper = shallow(<PrimesForm />);
       expect(wrapper.find('#frmFindPrimes')).toHaveLength(1);
+      expect(wrapper).toMatchSnapshot();
     });
 
 

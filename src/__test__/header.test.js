@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from '../header';
+import Header from '../components/header';
 import { shallow, mount } from 'enzyme';
 
 describe('Header: ', () => {
@@ -17,7 +17,8 @@ describe('Header: ', () => {
       const wrapper = shallow(<Header />);
       expect(wrapper.find('nav').length).toEqual(1);
       expect(wrapper.find('#btnDarkMode').length).toEqual(1);
-  })
+      expect(wrapper).toMatchSnapshot();
+    })
 
   // Ref: https://thomlom.dev/beginner-guide-testing-react-apps/
   it('simulates DarkMode button click events', () => {
