@@ -1,6 +1,7 @@
 import React from 'react';
 
 // Render the input form to enter a number
+// https://reactjs.org/docs/forms.html#controlled-components
 class PrimeForm extends React.Component {
   constructor(props) {
     super(props);
@@ -143,8 +144,8 @@ class PrimeForm extends React.Component {
   render() {
     return (
       <form id="frmFindHighestPrime" onSubmit={this.handleSubmit} className="container-fluid nambk-container-input text-center">
-        <h2 className="nambk-header">Prime Finder</h2>
-        <div className="nambk-header-desc">Highest Prime Number lower than Input Number</div>
+        <h2 className="nambk-header">Highest Prime</h2>
+        <div className="nambk-header-desc">lower than Input Number</div>
         <div>
           <input id="inputNumber" name="inputNumber" className="nambk-input" style={{width: '50%'}} 
                  type="number" value={this.state.inputNum} 

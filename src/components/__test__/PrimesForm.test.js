@@ -1,6 +1,6 @@
 import React from 'react';
 import PrimesForm from '../../lib/PrimesForm';
-import { shallow, render, mount } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 
 describe('PrimesForm: ', () => {
     it('should render the form and components', () => {
@@ -23,39 +23,36 @@ describe('PrimesForm: ', () => {
     });
 
 
-    // Test for changing input value NOT WORKING:
-    // Ref: https://github.com/enzymejs/enzyme/issues/364
-    // Ref: https://github.com/enzymejs/enzyme/issues/76
-    // it('should change the state on input1', () => {
-    //     const wrapper = mount(<PrimesForm />);
-    //     const input = wrapper.find('input').at(0);
-
-    //     input.instance().value = 100;
-    //     // input.simulate('change', { target: { value: 100 }});
-    //     // input.simulate('change', input);
-    //     // input.getDOMNode().value = 100;
-    //     // input.simulate('change');
-    //     // input.props().onChange({target: {value: 100}});
-
-    //     // expect(input.props().value).toEqual(100);
-    //     // expect(input.props()).toEqual(100);
-    //     // expect(input.prop('value')).toEqual(100);
-    //     expect(input.props().value).toEqual(100);
-    // });
+    it('should change the state on input1: call handleChange method', done => {
+        const text = '1'
+        const state = { inputFirstNum: text };
+        const props = {
+            fetchData: jest.fn(() => state)
+        };
+        const wrapper = mount(<PrimesForm {...props}/>);
+        const input = wrapper.find('#inputFirstNum');
     
+        input.props().value = text;
+        input.simulate('change', { target: { value: text } });
+        expect(input.get(0).props.value).toEqual(text);
+        done();
+    });
 
-    // it('should change the state on input2', () => {
-    //     const wrapper = mount(<PrimesForm />);
-    //     const input = wrapper.find('input').at(1);
 
-    //     // input.instance().value = 100;
-    //     input.simulate('change', { target: { value: 100 }});
-        
-    //     // expect(input.props().value).toEqual(100);
-    //     // expect(input.props()).toEqual(100);
-    //     // expect(input.prop('value')).toEqual(100);
-    //     expect(input.props().value).toEqual(100);
-    // });
+    it('should change the state on input2: call handleChange method', done => {
+        const text = '1000'
+        const state = { inputLastNum: text };
+        const props = {
+            fetchData: jest.fn(() => state)
+        };
+        const wrapper = mount(<PrimesForm {...props}/>);
+        const input = wrapper.find('#inputLastNum');
+    
+        input.props().value = text;
+        input.simulate('change', { target: { value: text } });
+        expect(input.get(0).props.value).toEqual(text);
+        done();
+    });
 
 
     // it('returns prime numbers when submit button clicked with inputs (1 & 10)', () => {

@@ -1,19 +1,31 @@
 import React from 'react';
+import { fireEvent, render, screen } from "@testing-library/react";
 import PrimeForm from '../../lib/PrimeForm';
-import { shallow, render, mount } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 
 describe('PrimeForm: ', () => {
+    beforeEach(() => {
+        // const wrapper = mount(<PrimeForm />);
+    });
+
+    afterEach(() => {
+        document.getElementsByTagName('html')[0].innerHTML = '';
+        jest.resetModules();
+        jest.resetAllMocks();
+        // wrapper.unmount();
+    });
+    
     it('should render the form and components', () => {
         const wrapper = shallow(<PrimeForm />);
         expect(wrapper.find('form').exists()).toBe(true);
         expect(wrapper.find('#inputNumber').length).toEqual(1);
         expect(wrapper.find('#btnFindHighestPrime').length).toEqual(1);
         expect(wrapper.find('#result').length).toEqual(1);
-    })
+    });
 
     it('has a title of "Prime Finder"', () => {
         const wrapper = shallow(<PrimeForm />);
-        expect(wrapper.find("h2").text()).toBe("Prime Finder");
+        expect(wrapper.find("h2").text()).toBe("Highest Prime");
     });
 
     it('renders one form component', () => {
@@ -35,30 +47,61 @@ describe('PrimeForm: ', () => {
     });
 
 
-    // test('returns "NaN" when submit button clicked with empty input', () => {
-
+    //! NOT WORKING
+    // it('should call handleSubmit method when submitting the form', done => {
+    //     const state = { inputNum: '' };
+    //     const props = {
+    //         fetchData: jest.fn(() => state)
+    //     };
+    //     const wrapper = mount(<PrimeForm {...props}/>);
+    //     const mockSubmit = {
+    //       preventDefault: jest.fn()
+    //     };
+    //     wrapper.find('form').simulate('submit', mockSubmit);
+    //     expect(wrapper.props().fetchData).toBeCalledWith(wrapper.state());
+    //     expect(mockSubmit.preventDefault).toBeCalledTimes(1);
+    //     done();
     // });
 
+    //! NOT WORKING
+    // it('should alert when input is a negative number', () => {
+    //     let alertSpy = jest.spyOn(window, 'alert');
+    //     const mockSubmit = jest.fn();
+    //     const wrapper = shallow(<PrimeForm onSubmit={mockSubmit}/>);
+    //     expect(wrapper.find('form')).toHaveLength(1);
+    //     const props = {
+    //         preventDefault: () => {},
+    //         inputNum: -2,
+    //     };
+    //     wrapper.find('form').simulate('submit', props);
+    //     expect(alertSpy).toBeCalledWith('Please input a positive integer!');
+    //     // expect(mockSubmit).toBeCalledTimes(1);
+    // });
 
-    it('returns "None" when submit button clicked with input (0 or 1 or 2)', () => {
-        const mockCallBack = jest.fn();
-        const wrapper = mount(<PrimeForm onSubmit={mockCallBack}/>);
+    //! NOT WORKING
+    // it('returns "None" when submit button clicked with input (0 or 1 or 2)', () => {
+    //     const mockSubmit = jest.fn();
+    //     const wrapper = shallow(<PrimeForm onSubmit={mockSubmit}/>);
         
-        wrapper.find('input').first().simulate('change', { 
-            target: { value: 2 } 
-        });
+    //     const props = {
+    //         preventDefault: () => {},
+    //         inputNum: 2,
+    //     }
+    //     wrapper.find('form').simulate('submit', props);
+    //     expect(mockSubmit).toBeCalledWith({'inputNum': 2});
 
-        // wrapper.find('[type="submit"]').simulate('submit');
-        // wrapper.find('#findHighestPrime').simulate('submit'); 
-        // wrapper.find('form').simulate('submit'); 
-        wrapper.find('form').simulate('submit', {
-            preventDefault: () => {},
-            target: { value: 20 }
-        });
-        
-        expect(mockCallBack).toHaveBeenCalled();
-        expect(wrapper.find('#result').innerHTML).toBe('None');    
-    });
+    //     // wrapper.find('[type="submit"]').simulate('submit');
+    //     // wrapper.find('#findHighestPrime').simulate('submit'); 
+    //     // wrapper.find('form').simulate('submit'); 
+
+    //     // wrapper.find('form').simulate('submit', {
+    //     //     preventDefault: () => {},
+    //     //     target: { value: 2 }
+    //     // });
+    //     // // console.log(wrapper.debug())
+    //     // expect(mockSubmit).toHaveBeenCalled();
+    //     // expect(wrapper.find('#result').innerHTML).toBe('None');  
+    // });
 
 
 

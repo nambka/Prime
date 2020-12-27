@@ -29,7 +29,7 @@ const Footer = () => {
                                 <i className="fa fa-cogs mr-1"></i>Preferences
                             </a>
                             <button id="btnDarkMode" data-toggle="tooltip" data-title="Day/Night Mode" className="btn btn-sm btn-icon btn-soft-light" data-original-title="" title="">
-                                <i id="btnDarkMode" className="fa fa-moon-o"></i></button>
+                                <i className="fa fa-moon-o"></i></button>
                         </div>
 
                     </div>
