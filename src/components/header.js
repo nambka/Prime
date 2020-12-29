@@ -8,12 +8,6 @@ import GlobalStyle from '../service/theme/global';
 const Header = () => {
   const [theme, toggleTheme] = useDarkMode();
 
-//   var cx = React.addons.classSet;
-//   var btnDarkModeClasses = cx({
-//     'btn btn-sm btn-icon btn-light': themes.lightTheme,
-//     'btn btn-sm btn-icon btn-dark': themes.darkTheme
-//   });
-
   var btnDarkModeClasses = 'btn btn-sm btn-icon';
   var btnDarkModeIcon = '';
   if (theme == 'light') {
