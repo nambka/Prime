@@ -275,6 +275,23 @@ a {
   padding: 0;
 }
 
+.btn-light {
+  background: #0002;
+  color: #000;
+}
+.btn-light:hover {
+  background: #0007;
+  border-color: transparent;
+}
+.btn-dark {
+  background: #03273ecc;
+  color: #ccc;
+}
+.btn-dark:hover {
+  background: #fff;
+  border-color: transparent;
+}
+
 /* Button alignment */
 .flex-wrapper-center {
   display: flex;
