@@ -7,6 +7,23 @@ import GlobalStyle from '../service/theme/global';
 
 const Header = () => {
   const [theme, toggleTheme] = useDarkMode();
+
+//   var cx = React.addons.classSet;
+//   var btnDarkModeClasses = cx({
+//     'btn btn-sm btn-icon btn-light': themes.lightTheme,
+//     'btn btn-sm btn-icon btn-dark': themes.darkTheme
+//   });
+
+  var btnDarkModeClasses = 'btn btn-sm btn-icon';
+  var btnDarkModeIcon = '';
+  if (theme == 'light') {
+    btnDarkModeClasses += ' btn-light';
+    btnDarkModeIcon = 'fa fa-sun-o';
+  } else if (theme == 'dark') {
+    btnDarkModeClasses += ' btn-dark';
+    btnDarkModeIcon = 'fa fa-moon-o';
+  }
+
   return (
   <ThemeProvider theme={theme === 'light' ? themes.lightTheme : themes.darkTheme}>
     <GlobalStyle />
@@ -45,8 +62,8 @@ const Header = () => {
                         </div>
                         <div className="ac-ln-action ac-ln-action-button">
                             <a className="ac-ln-button mr-3" href="/nambk">Login </a>
-                            <button id="btnDarkMode" className="btn btn-sm btn-icon btn-soft-light" onClick={toggleTheme}>
-                                &nbsp;&nbsp;<i className="fa fa-moon-o"></i></button>
+                            <button id="btnDarkMode" className={btnDarkModeClasses} onClick={toggleTheme}>
+                                &nbsp;&nbsp;<i className={btnDarkModeIcon}></i></button>
                         </div>
                     </div>
                 </div>
