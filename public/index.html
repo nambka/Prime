@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="canonical" href="https://prime-2020.web.app"/>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
@@ -45,4 +46,28 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
   </body>
+
+  <script>
+    // if ('serviceWorker' in navigator) {
+    //   window.addEventListener('load', () => {
+    //     navigator.serviceWorker
+    //     .register('/serviceWorker.js')
+    //     .then(swReg => {
+    //       console.log('Service Worker is registered. Scope is ' + swReg.scope);
+    //     })
+    //     .catch(err => {
+    //       console.error('Service Worker Error: ' + err);
+    //     });
+    //   });
+    // }
+
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('serviceWorker.js')
+      .then(reg => {
+        console.log('Registered service worker');
+      }).catch(err => {
+        console.log('Register service worker failed', err);
+      });
+    }
+  </script>
 </html>
