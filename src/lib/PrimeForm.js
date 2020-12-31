@@ -145,7 +145,7 @@ class PrimeForm extends React.Component {
     return (
       <form id="frmFindHighestPrime" onSubmit={this.handleSubmit} className="container-fluid nambk-container-input text-center">
         <h2 className="nambk-header">Highest Prime</h2>
-        <div className="nambk-header-desc">lower than Input Number</div>
+        <div className="nambk-header-desc">Lower than Input Number</div>
         <div>
           <input id="inputNumber" name="inputNumber" className="nambk-input" style={{width: '50%'}} 
                  type="number" value={this.state.inputNum} autofocus 
