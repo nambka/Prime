@@ -1,5 +1,4 @@
 import React from 'react';
-import imgWorldMap from '../assets/images/world-map-white.png';
 import imgSnapSeed from '../assets/images/snapseed256.png';
 
 const Footer = () => {
