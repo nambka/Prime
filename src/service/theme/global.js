@@ -39,7 +39,7 @@ const GlobalStyle = createGlobalStyle`
     border: ${({ theme }) => theme.inputBorder};
   }
 
-  input[type=number]:hover {
+  input[type=number]:focus {
     border-color: ${({ theme }) => theme.inputBorderHover};
   }
 
