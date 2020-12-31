@@ -1,4 +1,4 @@
-const filesToCache = [
+const PRECACHE_URLS = [
     '/',
     '../src/assets/css/nav.css',
     '../src/assets/css/style.css',
