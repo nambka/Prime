@@ -1,9 +1,10 @@
+const PRECACHE = 'my-precache-v1';
+const RUNTIME = 'my-runtime';
 const PRECACHE_URLS = [
     '/',
     '../src/assets/css/nav.css',
     '../src/assets/css/style.css',
     '../src/assets/images/logo.png',
-    'index.html',
     '404.html'
 ];
 
