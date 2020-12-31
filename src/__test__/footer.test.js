@@ -25,8 +25,8 @@ describe('Footer', () => {
   it('simulates button click events', () => {
     // const mockCallBack = sinon.spy(); // sinon
     const mockCallBack = jest.fn();
-    const wrapper = shallow(<button id="btnDarkMode" onClick={mockCallBack}/>);
-    wrapper.find('#btnDarkMode').simulate('click');
+    const wrapper = shallow(<button id="btnDarkModeFooter" onClick={mockCallBack}/>);
+    wrapper.find('#btnDarkModeFooter').simulate('click');
     // expect(mockCallBack).toHaveProperty('callCount', 1); // sinon
     // expect(mockCallBack.mock.calls.length).toEqual(1);
     expect(mockCallBack).toHaveBeenCalled();
