@@ -70,11 +70,11 @@ class PrimesForm extends React.Component {
         <div className="nambk-header-desc">Between Two Numbers</div>
         <div>
           <input className="nambk-input" style={{width: '33%'}} 
-                 type="number" min="1" max="9999999" 
+                 type="number" min="1" max="9999999" aria-label="Input Number"
                  value={this.state.inputFirstNum} onChange={this.handleChange} 
                  id="inputFirstNum" name="inputFirstNum" placeholder="Enter a number"/>
           <input className="nambk-input" style={{width: '33%'}} 
-                 type="number" min="1" max="9999999" 
+                 type="number" min="1" max="9999999" aria-label="Input Number"
                  value={this.state.inputLastNum} onChange={this.handleChange} 
                  id="inputLastNum" name="inputLastNum" placeholder="Enter a number"/>
           <input id="btnFindPrimes" className="nambk-btn nambk-btn-primary" 

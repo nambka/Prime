@@ -59,7 +59,7 @@ const Header = () => {
                         </div>
                         <div className="ac-ln-action ac-ln-action-button">
                             <a className="ac-ln-button mr-3" href="/nambk">Login </a>
-                            <button id="btnDarkMode" className={btnDarkModeClasses} onClick={toggleTheme}>
+                            <button id="btnDarkMode" className={btnDarkModeClasses} onClick={toggleTheme} aria-label="Dark/Light Mode">
                                 &nbsp;&nbsp;<i className={btnDarkModeIcon}></i></button>
                         </div>
                     </div>
