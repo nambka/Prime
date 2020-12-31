@@ -148,7 +148,7 @@ class PrimeForm extends React.Component {
         <div className="nambk-header-desc">lower than Input Number</div>
         <div>
           <input id="inputNumber" name="inputNumber" className="nambk-input" style={{width: '50%'}} 
-                 type="number" value={this.state.inputNum} 
+                 type="number" value={this.state.inputNum} autofocus 
                  onChange={this.handleChange} placeholder="Enter a number"/>
           <input id="btnFindHighestPrime" className="nambk-btn nambk-btn-primary" 
                  type="submit" value="Go"/>
