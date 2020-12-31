@@ -9,6 +9,9 @@ export const useDarkMode = () => {
       if (theme === 'light') {
         localStorage.setItem('theme', 'dark');
         setTheme('dark');
+      } else if (theme === 'dark') {
+        localStorage.setItem('theme', 'moon');
+        setTheme('moon');
       } else {
         localStorage.setItem('theme', 'light');
         setTheme('light');
@@ -50,6 +53,28 @@ const themes = {
     resultBoxShadow: 'inset 0 0 5px 0 rgba(0,0,0,.1)', 
   },
   darkTheme: {
+    bodyBkg: '#111',
+    bodyTextColor: '#ccc',
+    footerBkg: '#000',
+    footerTextColor: '#ccc',
+
+    formBorder: '1px solid #aaa3',
+
+    formBkg: '#000!important',
+    formBoxShadow: '0 0.5rem 1.2rem rgba(124,124,124,.2)',
+    formTransition: '.3s all ease',
+
+    formBkgHover: '#bbb1!important',
+    formBoxShadowHover: '2px 5px 10px 0 rgba(0,0,0,.2)',
+    formTransitionHover: '.2s all ease',
+    
+    inputBkg: '#ccc2',
+    inputBorder: '1px solid #555',
+    inputBorderHover: '#1274e0',
+
+    resultBoxShadow: 'inset 0 0 5px 0 rgba(0,0,0,.3)',
+  },
+  moonTheme: {
     bodyBkg: '#01263f',
     bodyTextColor: '#a2b9c8',
     footerBkg: '#012137',
