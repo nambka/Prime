@@ -11,10 +11,10 @@ class App extends React.Component {
     return (
     <div>
       <Header />
-      <div className="container-fluid text-center">
+      <main className="container-fluid text-center">
         <PrimeForm />
         <PrimesForm />
-      </div>
+      </main>
       <Footer />
     </div>
     );
