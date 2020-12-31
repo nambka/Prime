@@ -17,7 +17,7 @@ describe('Footer', () => {
     const wrapper = shallow(<Footer />);
     expect(wrapper.find('div.container').length).toEqual(1);
     expect(wrapper.find('span.h5').length).toEqual(1);
-    expect(wrapper.find('#btnDarkMode').length).toEqual(1);
+    expect(wrapper.find('#btnDarkModeFooter').length).toEqual(1);
     expect(wrapper).toMatchSnapshot();
   })
 
