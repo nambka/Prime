@@ -15,11 +15,14 @@ const Header = () => {
     btnDarkModeIcon = 'fa fa-sun-o';
   } else if (theme == 'dark') {
     btnDarkModeClasses += ' btn-dark';
+    btnDarkModeIcon = 'fa fa-circle-o';
+  } else {
+    btnDarkModeClasses += ' btn-moon';
     btnDarkModeIcon = 'fa fa-moon-o';
   }
 
   return (
-  <ThemeProvider theme={theme === 'light' ? themes.lightTheme : themes.darkTheme}>
+  <ThemeProvider theme={theme === 'light' ? themes.lightTheme : (theme === 'dark' ? themes.darkTheme : themes.moonTheme)}>
     <GlobalStyle />
     <nav id="ac-localnav" className="js touch css-sticky ac-ln-sticking" lang="en-US" dir="ltr" role="navigation" aria-label="Local">
         <div className="ac-ln-wrapper">
