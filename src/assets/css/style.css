@@ -284,10 +284,18 @@ a {
   border-color: transparent;
 }
 .btn-dark {
-  background: #03273ecc;
+  background: #222;
   color: #ccc;
 }
 .btn-dark:hover {
+  background: #fff;
+  border-color: transparent;
+}
+.btn-moon {
+  background: #03273ecc;
+  color: #ccc;
+}
+.btn-moon:hover {
   background: #fff;
   border-color: transparent;
 }
