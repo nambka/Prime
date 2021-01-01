@@ -46,6 +46,8 @@ const themes = {
     formBoxShadowHover: '0 3px 10px 0 rgba(204,204,204,.8)',
     formTransitionHover: '.2s all ease',
 
+    formHeaderDescColor: '#006647', // Contrast Checker:https://webaim.org/resources/contrastchecker/
+
     inputBkg: '#fff3',
     inputBorder: '1px solid #E6E8EA',
     inputBorderHover: '#F0B90B',
@@ -67,6 +69,8 @@ const themes = {
     formBkgHover: '#bbb1!important',
     formBoxShadowHover: '2px 5px 10px 0 rgba(0,0,0,.2)',
     formTransitionHover: '.2s all ease',
+
+    formHeaderDescColor: '#00c087', // Contrast Checker:https://webaim.org/resources/contrastchecker/
     
     inputBkg: '#ccc2',
     inputBorder: '1px solid #555',
@@ -76,9 +80,9 @@ const themes = {
   },
   moonTheme: {
     bodyBkg: '#01263f',
-    bodyTextColor: '#a2b9c8',
+    bodyTextColor: '#AABCCB',
     footerBkg: '#012137',
-    footerTextColor: '#a2b9c8',
+    footerTextColor: '#AABCCB',
 
     formBorder: '1px solid #18365b',
 
@@ -91,6 +95,8 @@ const themes = {
     formBoxShadowHover: '2px 5px 10px 0 rgba(0,0,0,.3)',
     // formBoxShadowHover: '0 0.5rem 1.2rem rgba(4,76,124,.2)',
     formTransitionHover: '.2s all ease',
+
+    formHeaderDescColor: '#00D696', // Contrast Checker:https://webaim.org/resources/contrastchecker/
     
     inputBkg: '#ccd2',
     inputBorder: '1px solid #256',

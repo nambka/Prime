@@ -99,8 +99,9 @@ img {
 }
 .nambk-header-desc {
   font-size: 1rem;
-  /* color: #00c087; //not enough contrast: https://web.dev/color-contrast/?utm_source=lighthouse&utm_medium=devtools Check:https://webaim.org/resources/contrastchecker/ */ 
-  color: #00855D; 
+  /* color: #00855D; // Check:https://webaim.org/resources/contrastchecker/  */
+  /* color: #00c087; // Not enough contrast: https://web.dev/color-contrast/?utm_source=lighthouse&utm_medium=devtools */ 
+  /* color: #00D696;  */
   text-align: center;
   padding-bottom: 1rem;
 }

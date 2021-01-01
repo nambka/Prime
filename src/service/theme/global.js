@@ -33,6 +33,10 @@ const GlobalStyle = createGlobalStyle`
     transition: ${({ theme }) => theme.formTransitionHover};
   }
 
+  form .nambk-header-desc {
+    color: ${({ theme }) => theme.formHeaderDescColor};
+  }
+
   input[type=number] {
     color: ${({ theme }) => theme.bodyTextColor};
     background-color: ${({ theme }) => theme.inputBkg};
