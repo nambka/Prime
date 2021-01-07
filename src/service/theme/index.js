@@ -63,11 +63,11 @@ const themes = {
     formBorder: '1px solid #aaa3',
 
     formBkg: '#000!important',
-    formBoxShadow: '0 0.5rem 1.2rem rgba(124,124,124,.2)',
+    // formBoxShadow: '0 0.5rem 1.2rem rgba(124,124,124,.2)',
     formTransition: '.3s all ease',
 
     formBkgHover: '#bbb1!important',
-    formBoxShadowHover: '2px 5px 10px 0 rgba(0,0,0,.2)',
+    // formBoxShadowHover: '2px 5px 10px 0 rgba(0,0,0,.2)',
     formTransitionHover: '.2s all ease',
 
     formHeaderDescColor: '#00c087', // Contrast Checker:https://webaim.org/resources/contrastchecker/
@@ -76,7 +76,7 @@ const themes = {
     inputBorder: '1px solid #555',
     inputBorderHover: '#1274e0',
 
-    resultBoxShadow: 'inset 0 0 5px 0 rgba(0,0,0,.3)',
+    // resultBoxShadow: 'inset 0 0 5px 0 rgba(0,0,0,.3)',
   },
   moonTheme: {
     bodyBkg: '#01263f',
@@ -102,7 +102,7 @@ const themes = {
     inputBorder: '1px solid #256',
     inputBorderHover: '#2ac',
 
-    resultBoxShadow: 'inset 0 0 5px 0 rgba(0,0,0,.3)',
+    // resultBoxShadow: 'inset 0 0 5px 0 rgba(0,0,0,.3)',
     // resultBoxShadow: 'inset 0 0 10px #ddd;',
   }
 };
