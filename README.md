@@ -4,6 +4,7 @@ Create a web application that takes in a number and returns to the user the high
 [![start with why](https://img.shields.io/badge/start%20with-why%3F-brightgreen.svg?style=flat)](https://github.com/dwyl/repo-badges)
 [![Build Status](https://travis-ci.org/nambka/Prime.png?branch=master)](https://travis-ci.org/nambka/Prime)
 [![Documentation Status](https://readthedocs.org/projects/prime-2020/badge/?version=latest)](https://prime-2020.readthedocs.io/en/latest/?badge=latest)
+[![codecov](https://codecov.io/gh/nambka/Prime/branch/master/graph/badge.svg?token=Q8KE89U04F)](https://codecov.io/gh/nambka/Prime)
 ![Known Vulnerabilities](https://snyk.io/test/github/nambka/Prime/badge.svg)
 ![npm](https://img.shields.io/npm/v/npm)
 ![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)
