@@ -5,9 +5,7 @@ import { ThemeProvider } from 'styled-components';
 import themes, {useDarkMode} from '../service/theme';
 import GlobalStyle from '../service/theme/global';
 
-const Header = () => {
-  const [theme, toggleTheme] = useDarkMode();
-
+const Header = ({ theme, toggleTheme }) => {
   var btnDarkModeClasses = 'btn btn-sm btn-icon';
   var btnDarkModeIcon = '';
   if (theme == 'light') {
@@ -22,8 +20,6 @@ const Header = () => {
   }
 
   return (
-  <ThemeProvider theme={theme === 'light' ? themes.lightTheme : (theme === 'dark' ? themes.darkTheme : themes.moonTheme)}>
-    <GlobalStyle />
     <nav id="ac-localnav" className="js touch css-sticky ac-ln-sticking" lang="en-US" dir="ltr" role="navigation" aria-label="Local">
         <div className="ac-ln-wrapper">
             <div className="ac-ln-background"></div>
@@ -67,7 +63,6 @@ const Header = () => {
             </div>
         </div>
     </nav> 
-  </ThemeProvider> 
   );
 };
 export default Header;

@@ -6,18 +6,23 @@ import Footer from './footer';
 import PrimeForm from '../lib/PrimeForm';
 import PrimesForm from '../lib/PrimesForm';
 
-class App extends React.Component {
-  render() {
-    return (
-    <div>
-      <Header />
+import { ThemeProvider } from 'styled-components';
+import themes, {useDarkMode} from '../service/theme';
+import GlobalStyle from '../service/theme/global';
+
+const App = () => {
+  const [theme, toggleTheme] = useDarkMode();
+
+  return (
+    <ThemeProvider theme={theme === 'light' ? themes.lightTheme : (theme === 'dark' ? themes.darkTheme : themes.moonTheme)}>
+      <GlobalStyle />
+      <Header theme={theme} toggleTheme={toggleTheme}/>
       <main className="container-fluid text-center">
         <PrimeForm />
         <PrimesForm />
       </main>
-      <Footer />
-    </div>
-    );
-  }
+      <Footer theme={theme} toggleTheme={toggleTheme}/>
+    </ThemeProvider> 
+  );
 };
 export default App;

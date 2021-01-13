@@ -1,9 +1,21 @@
 import React from 'react';
 import imgSnapSeed from '../assets/images/snapseed256.png';
+import { ThemeProvider } from 'styled-components';
+import themes, {useDarkMode} from '../service/theme';
+import GlobalStyle from '../service/theme/global';
 
-const Footer = () => {
+const Footer = ({ theme, toggleTheme }) => {
+  var btnDarkModeIcon = '';
+  if (theme == 'light') {
+    btnDarkModeIcon = 'fa fa-sun-o';
+  } else if (theme == 'dark') {
+    btnDarkModeIcon = 'fa fa-circle-o';
+  } else {
+    btnDarkModeIcon = 'fa fa-moon-o';
+  }
+
   return (
-    <footer className="gradient-half-primary-body-v1 py-4"
+  <footer className="gradient-half-primary-body-v1 py-4"
         style={{height: 'calc(100% - 60px)',}}> 
         <div className="container">
             <div className="row justify-content-md-between font-size-1 py-3">
@@ -19,8 +31,10 @@ const Footer = () => {
                             <a className="btn btn-xss btn-soft-light mr-2" href="/settings">
                                 <i className="fa fa-cogs mr-1"></i>Preferences
                             </a>
-                            <button id="btnDarkModeFooter" data-toggle="tooltip" data-title="Day/Night Mode" className="btn btn-sm btn-icon btn-soft-light" data-original-title="" aria-label="Dark/Light Mode">
-                                <i className="fa fa-moon-o"></i></button>
+                            <button id="btnDarkModeFooter" onClick={toggleTheme} 
+                                    data-toggle="tooltip" data-title="Day/Night Mode" 
+                                    className="btn btn-sm btn-icon btn-soft-light" data-original-title="" aria-label="Dark/Light Mode">
+                                <i className={btnDarkModeIcon}></i></button>
                         </div>
 
                     </div>
@@ -29,6 +43,7 @@ const Footer = () => {
 
         </div>
     </footer> 
+    
 );
 };
 
