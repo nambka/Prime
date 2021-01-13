@@ -1,8 +1,5 @@
 import React from 'react';
 import imgSnapSeed from '../assets/images/snapseed256.png';
-import { ThemeProvider } from 'styled-components';
-import themes, {useDarkMode} from '../service/theme';
-import GlobalStyle from '../service/theme/global';
 
 const Footer = ({ theme, toggleTheme }) => {
   var btnDarkModeIcon = '';

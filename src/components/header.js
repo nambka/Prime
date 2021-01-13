@@ -1,10 +1,6 @@
 import React from 'react';
 import imgLogo from '../assets/images/logo.png';
 
-import { ThemeProvider } from 'styled-components';
-import themes, {useDarkMode} from '../service/theme';
-import GlobalStyle from '../service/theme/global';
-
 const Header = ({ theme, toggleTheme }) => {
   var btnDarkModeClasses = 'btn btn-sm btn-icon';
   var btnDarkModeIcon = '';
