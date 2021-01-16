@@ -16,7 +16,7 @@ const App = () => {
   return (
     <ThemeProvider theme={theme === 'light' ? themes.lightTheme : (theme === 'dark' ? themes.darkTheme : themes.moonTheme)}>
       <GlobalStyle />
-      <Header theme={theme} toggleTheme={toggleTheme}/>
+      <Header />
       <main className="container-fluid text-center">
         <PrimeForm />
         <PrimesForm />
