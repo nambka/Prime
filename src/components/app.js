@@ -1,8 +1,8 @@
 import React from 'react';
 import '../assets/css/nav.css';
 import '../assets/css/style.css';
-import Header from './header';
-import Footer from './footer';
+import Header from './Header';
+import Footer from './Footer';
 import PrimeForm from '../lib/PrimeForm';
 import PrimesForm from '../lib/PrimesForm';
 
