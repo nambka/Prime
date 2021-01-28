@@ -3,76 +3,158 @@ import PrimesForm from '../lib/PrimesForm';
 import { shallow, mount } from 'enzyme';
 
 describe('PrimesForm: ', () => {
-    it('should render the form and components', () => {
-        const wrapper = shallow(<PrimesForm />);
-        expect(wrapper.find('form').exists()).toBe(true);
-        expect(wrapper.find('#inputFirstNum').length).toEqual(1);
-        expect(wrapper.find('#inputLastNum').length).toEqual(1);
-        expect(wrapper.find('#btnFindPrimes').length).toEqual(1);
-        expect(wrapper.find('#result').length).toEqual(1);
-        expect(wrapper).toMatchSnapshot();
-    })
+  let wrapper;
+  
+  beforeEach(() => {
+    wrapper = shallow(<PrimesForm />);
+  });
 
-    it('has a title of "Prime Numbers"', () => {
-        const wrapper = shallow(<PrimesForm />);
-        expect(wrapper.find("h2").text()).toBe("Prime Numbers");
-        expect(wrapper).toMatchSnapshot();
+  afterEach(() => {
+    jest.resetModules();
+    jest.resetAllMocks();
+    // wrapper.unmount();
+  });
+
+  it('should render the form and components', () => {
+    const wrapper = shallow(<PrimesForm />);
+    expect(wrapper.find('form').exists()).toBe(true);
+    expect(wrapper.find('#inputFirstNum').length).toEqual(1);
+    expect(wrapper.find('#inputLastNum').length).toEqual(1);
+    expect(wrapper.find('input[type="submit"]').length).toEqual(1);
+    expect(wrapper.find('#result').length).toEqual(1);
+    expect(wrapper).toMatchSnapshot();
+  })
+
+  it('has a title of "Prime Numbers"', () => {
+    const wrapper = shallow(<PrimesForm />);
+    expect(wrapper.find("h2").text()).toBe("Prime Numbers");
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('renders one form component', () => {
+  const wrapper = shallow(<PrimesForm />);
+  expect(wrapper.find('form')).toHaveLength(1);
+  expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should change the state on input1: call handleChange method', done => {
+    const text = '1'
+    const state = { inputFirstNum: text };
+    const props = {
+        fetchData: jest.fn(() => state)
+    };
+    const wrapper = mount(<PrimesForm {...props}/>);
+    const input = wrapper.find('#inputFirstNum');
+
+    input.props().value = text;
+    input.simulate('change', { target: { value: text } });
+    expect(input.get(0).props.value).toEqual(text);
+    done();
+  });
+
+  it('should change the state on input2: call handleChange method', done => {
+    const text = '1000'
+    const state = { inputLastNum: text };
+    const props = {
+        fetchData: jest.fn(() => state)
+    };
+    const wrapper = mount(<PrimesForm {...props}/>);
+    const input = wrapper.find('#inputLastNum');
+
+    input.props().value = text;
+    input.simulate('change', { target: { value: text } });
+    expect(input.get(0).props.value).toEqual(text);
+    done();
+  });
+
+  it('should have proper props for input1 field', () => {
+    expect(wrapper.find('input[type="number"]').at(0).props()).toEqual({
+      className: 'nambk-input',
+      onChange: expect.any(Function),
+      placeholder: 'Enter a number',
+      type: 'number',
+      'aria-label': 'Input Number',
+      min: '1',
+      max: '9999999',
+      id: 'inputFirstNum',
+      name: 'inputFirstNum',
+      style: Object({width: '33%'}),
+      value: 1,
     });
+  });
 
-    it('renders one form component', () => {
-      const wrapper = shallow(<PrimesForm />);
-      expect(wrapper.find('#frmFindPrimes')).toHaveLength(1);
-      expect(wrapper).toMatchSnapshot();
+  it('should have proper props for input2 field', () => {
+    expect(wrapper.find('input[type="number"]').at(1).props()).toEqual({
+      className: 'nambk-input',
+      onChange: expect.any(Function),
+      placeholder: 'Enter a number',
+      type: 'number',
+      'aria-label': 'Input Number',
+      min: '1',
+      max: '9999999',
+      id: 'inputLastNum',
+      name: 'inputLastNum',
+      style: Object({width: '33%'}),
+      value: 1000,
     });
+  });
 
-
-    it('should change the state on input1: call handleChange method', done => {
-        const text = '1'
-        const state = { inputFirstNum: text };
-        const props = {
-            fetchData: jest.fn(() => state)
-        };
-        const wrapper = mount(<PrimesForm {...props}/>);
-        const input = wrapper.find('#inputFirstNum');
-    
-        input.props().value = text;
-        input.simulate('change', { target: { value: text } });
-        expect(input.get(0).props.value).toEqual(text);
-        done();
+  it('should have proper props for submit button', () => {
+    expect(wrapper.find('input[type="submit"]').props()).toEqual({
+      className: 'nambk-btn nambk-btn-primary',
+      id: 'btnFindPrimes',
+      value: 'Go',
+      type: 'submit',
     });
+  });
 
+  // it('should change the value on input1', () => {
+  //   wrapper.find('input[type="number"]').at(0).simulate('change', { 
+  //     target: { value: 11 }
+  //   });
+  //   expect(wrapper.find('input[type="number"]').at(0).prop('value')).toEqual(11);
+  //   // expect(wrapper.find("#inputFirstNum").props().value).toEqual(11);
+  // });
+  // it('should change the value on input2', () => {
+  //   wrapper.find('input[type="number"]').at(1).simulate('change', { 
+  //     target: { value: 22 } 
+  //   });
+  //   expect(wrapper.find('input[type="number"]').at(1).prop('value')).toEqual(22);
+  //   // expect(wrapper.find("#inputLastNum").props().value).toEqual(22);
+  // });
 
-    it('should change the state on input2: call handleChange method', done => {
-        const text = '1000'
-        const state = { inputLastNum: text };
-        const props = {
-            fetchData: jest.fn(() => state)
-        };
-        const wrapper = mount(<PrimesForm {...props}/>);
-        const input = wrapper.find('#inputLastNum');
-    
-        input.props().value = text;
-        input.simulate('change', { target: { value: text } });
-        expect(input.get(0).props.value).toEqual(text);
-        done();
-    });
+  // simply call Enzyme's setState method on your component instance. An important note – your "component instance" in this case is a shallow rendered component.
+  it('should change state of input1', () => {
+    expect(wrapper.find('input[type="number"]').at(0).prop('value')).toEqual(1);
 
+    wrapper.setState({ inputFirstNum: 11 });
+    expect(wrapper.find('input[type="number"]').at(0).prop('value')).toEqual(11);
+    console.log(wrapper.debug());
+  });
+  it('should change state of input2', () => {
+    expect(wrapper.find('input[type="number"]').at(1).prop('value')).toEqual(1000);
 
-    // it('returns prime numbers when submit button clicked with inputs (1 & 10)', () => {
-    //     const testValues = {
-    //         inputFirstNum: '1',
-    //         inputLastNum: '10',
-    //         handleSubmit: jest.fn(),
-    //     };
-    //     const component = shallow(
-    //         <PrimesForm {...testValues} />
-    //     );
-    //     component.find('#btnFindPrimes').simulate('click');
-    //     expect(testValues.handleSubmit).toHaveBeenCalledTimes(1);
-    //     expect(testValues.handleSubmit).toBeCalledWith({
-    //         inputFirstNum: testValues.inputFirstNum, 
-    //         inputLastNum: testValues.inputLastNum
-    //     });
+    wrapper.setState({ inputLastNum: 22 });
+    expect(wrapper.find('input[type="number"]').at(1).prop('value')).toEqual(22);
+  });
+
+  it('simulates form submit event', () => {
+    const testValues = {
+      inputFirstNum: '1',
+      inputLastNum: '10',
+      handleSubmit: jest.fn(),
+    };
+    const fakeEvent = { preventDefault: () => console.log('preventDefault') };
+    const mockSubmit = jest.fn().mockImplementation((init) => [init, mockSubmit]);
+    wrapper = shallow(<PrimesForm {...testValues} onSubmit={mockSubmit}/>);
+
+    wrapper.find('form').simulate('submit', fakeEvent);
+    expect(mockSubmit).toBeTruthy();
+    // expect(testValues.handleSubmit).toHaveBeenCalledTimes(1);
+    // expect(testValues.handleSubmit).toBeCalledWith({
+    //     inputFirstNum: testValues.inputFirstNum, 
+    //     inputLastNum: testValues.inputLastNum
     // });
+  });
 
 })
