@@ -1,11 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`PrimeForm with no props:  has a title of "Prime Finder" 1`] = `ShallowWrapper {}`;
-
-exports[`PrimeForm with no props:  renders one form component 1`] = `ShallowWrapper {}`;
-
-exports[`PrimeForm with no props:  should render the form and components 1`] = `ShallowWrapper {}`;
-
 exports[`PrimeForm:  has a title of "Prime Finder" 1`] = `ShallowWrapper {}`;
 
 exports[`PrimeForm:  renders one form component 1`] = `ShallowWrapper {}`;
