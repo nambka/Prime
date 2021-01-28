@@ -1,5 +1,3 @@
-import _mixins from './abstracts/_mixins'
-import _variables from './abstracts/_variables'
 import { useState, useEffect } from 'react';
 
 // Credits: 
@@ -30,8 +28,6 @@ export const useDarkMode = () => {
 }; // this can be moved to a separate component: useDarkMode.js
 
 const themes = {
-  ..._mixins,
-  ..._variables,
   lightTheme: {
     bodyBkg: '#F7F8F9',
     bodyTextColor: '#353637',
