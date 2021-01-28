@@ -129,7 +129,6 @@ describe('PrimesForm: ', () => {
 
     wrapper.setState({ inputFirstNum: 11 });
     expect(wrapper.find('input[type="number"]').at(0).prop('value')).toEqual(11);
-    console.log(wrapper.debug());
   });
   it('should change state of input2', () => {
     expect(wrapper.find('input[type="number"]').at(1).prop('value')).toEqual(1000);
