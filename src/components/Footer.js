@@ -25,7 +25,7 @@ const Footer = ({ theme, toggleTheme }) => {
                         <p className="font-size-0-75">A brand new journey to the beautiful angles of this world. Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p>
 
                         <div className="d-flex align-items-center">
-                            <a className="btn btn-xss btn-soft-light mr-2" href="/settings">
+                            <a className="btn btn-xss btn-soft-light mr-2" href="https://github.com/nambka/Prime">
                                 <i className="fa fa-cogs mr-1"></i>Preferences
                             </a>
                             <button className="btn btn-sm btn-icon btn-soft-light" 
