@@ -28,9 +28,10 @@ const Footer = ({ theme, toggleTheme }) => {
                             <a className="btn btn-xss btn-soft-light mr-2" href="/settings">
                                 <i className="fa fa-cogs mr-1"></i>Preferences
                             </a>
-                            <button id="btnDarkModeFooter" onClick={toggleTheme} 
+                            <button className="btn btn-sm btn-icon btn-soft-light" 
+                                    id="btnDarkModeFooter" onClick={toggleTheme} 
                                     data-toggle="tooltip" data-title="Day/Night Mode" 
-                                    className="btn btn-sm btn-icon btn-soft-light" data-original-title="" aria-label="Dark/Light Mode">
+                                    data-original-title="" aria-label="Dark/Light Mode">
                                 <i className={btnDarkModeIcon}></i></button>
                         </div>
 
