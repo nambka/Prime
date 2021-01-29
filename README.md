@@ -8,7 +8,7 @@ Create a web application that takes in a number and returns to the user the high
 ![Known Vulnerabilities](https://snyk.io/test/github/nambka/Prime/badge.svg)
 ![npm](https://img.shields.io/npm/v/npm)
 ![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)
-![HitCount](http://hits.dwyl.com/nambka/nambka/Prime.svg)
+[![HitCount](http://hits.dwyl.com/nambka/Prime.svg)](http://hits.dwyl.com/nambka/Prime)
 
 ### You will be graded on:
 - Performance of algorithm
