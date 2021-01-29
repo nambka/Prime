@@ -7,7 +7,8 @@ import PrimeForm from '../lib/PrimeForm';
 import PrimesForm from '../lib/PrimesForm';
 
 import { ThemeProvider } from 'styled-components';
-import themes, {useDarkMode} from '../service/theme';
+import themes from '../service/theme';
+import { useDarkMode } from '../lib/DarkMode';
 import GlobalStyle from '../service/theme/global';
 
 const App = () => {
