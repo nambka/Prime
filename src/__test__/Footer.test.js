@@ -1,5 +1,5 @@
 import React from 'react';
-import Footer from '../components/footer';
+import Footer from '../components/Footer';
 import { shallow, mount } from 'enzyme';
 
 describe('Footer', () => {
