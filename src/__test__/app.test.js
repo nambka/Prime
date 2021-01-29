@@ -1,7 +1,7 @@
 import React from 'react';
-import App from '../components/app';
-import Header from '../components/header';
-import Footer from '../components/header';
+import App from '../components/App';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 import PrimeForm from '../lib/PrimeForm';
 import PrimesForm from '../lib/PrimesForm';
 import { shallow, mount } from 'enzyme';
