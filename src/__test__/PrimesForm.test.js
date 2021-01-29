@@ -108,32 +108,17 @@ describe('PrimesForm: ', () => {
     });
   });
 
-  // it('should change the value on input1', () => {
-  //   wrapper.find('input[type="number"]').at(0).simulate('change', { 
-  //     target: { value: 11 }
-  //   });
-  //   expect(wrapper.find('input[type="number"]').at(0).prop('value')).toEqual(11);
-  //   // expect(wrapper.find("#inputFirstNum").props().value).toEqual(11);
-  // });
-  // it('should change the value on input2', () => {
-  //   wrapper.find('input[type="number"]').at(1).simulate('change', { 
-  //     target: { value: 22 } 
-  //   });
-  //   expect(wrapper.find('input[type="number"]').at(1).prop('value')).toEqual(22);
-  //   // expect(wrapper.find("#inputLastNum").props().value).toEqual(22);
-  // });
-
-  // simply call Enzyme's setState method on your component instance. An important note – your "component instance" in this case is a shallow rendered component.
-  it('should change state of input1', () => {
-    expect(wrapper.find('input[type="number"]').at(0).prop('value')).toEqual(1);
-
-    wrapper.setState({ inputFirstNum: 11 });
+  // Solution for state not updated: https://github.com/enzymejs/enzyme/issues/1999#issuecomment-491634796
+  it('should change the value on input1', () => {
+    wrapper.find('input[type="number"]').at(0).simulate('change', { 
+      target: { name: 'inputFirstNum', value: 11 }
+    });
     expect(wrapper.find('input[type="number"]').at(0).prop('value')).toEqual(11);
   });
-  it('should change state of input2', () => {
-    expect(wrapper.find('input[type="number"]').at(1).prop('value')).toEqual(1000);
-
-    wrapper.setState({ inputLastNum: 22 });
+  it('should change the value on input2', () => {
+    wrapper.find('input[type="number"]').at(1).simulate('change', { 
+      target: { name: 'inputLastNum', value: 22 } 
+    });
     expect(wrapper.find('input[type="number"]').at(1).prop('value')).toEqual(22);
   });
 
