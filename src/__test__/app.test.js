@@ -5,7 +5,6 @@ import Footer from '../components/Footer';
 import PrimeForm from '../lib/PrimeForm';
 import PrimesForm from '../lib/PrimesForm';
 import { shallow, mount } from 'enzyme';
-import TestRenderer from 'react-test-renderer';
 
 describe('App:', () => {
   it('renders components without errors', () => {
