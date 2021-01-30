@@ -1,10 +1,10 @@
 import React from 'react';
 import Header from '../components/Header';
-import { shallow, mount } from 'enzyme';
+import { shallow } from 'enzyme';
 
 describe('Header: ', () => {
   beforeEach(() => {
-    // const wrapper = mount(<Header />);
+    // const wrapper = shallow(<Header />);
   });
 
   afterEach(() => {

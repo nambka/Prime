@@ -4,7 +4,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import PrimeForm from '../lib/PrimeForm';
 import PrimesForm from '../lib/PrimesForm';
-import { shallow, mount } from 'enzyme';
+import { shallow } from 'enzyme';
 
 describe('App:', () => {
   it('renders components without errors', () => {
