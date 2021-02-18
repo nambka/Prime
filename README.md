@@ -5,7 +5,7 @@ Create a web application that takes in a number and returns to the user the high
 [![Build Status](https://travis-ci.org/nambka/Prime.png?branch=master)](https://travis-ci.org/nambka/Prime)
 [![Documentation Status](https://readthedocs.org/projects/prime-2020/badge/?version=latest)](https://prime-2020.readthedocs.io/en/latest/?badge=latest)
 [![codecov](https://codecov.io/gh/nambka/Prime/branch/master/graph/badge.svg?token=Q8KE89U04F)](https://codecov.io/gh/nambka/Prime)
-[![Code Quality: Javascript](https://img.shields.io/lgtm/grade/javascript/g/nambka/Prime.svg)](https://lgtm.com/projects/g/sebhildebrandt/systeminformation/context:javascript)
+[![Code Quality: Javascript](https://img.shields.io/lgtm/grade/javascript/g/nambka/Prime.svg)](https://lgtm.com/projects/g/nambka/Prime/context:javascript)
 [![Total alerts](https://img.shields.io/lgtm/alerts/g/nambka/Prime.svg)](https://lgtm.com/projects/g/nambka/Prime/alerts/)
 ![Known Vulnerabilities](https://snyk.io/test/github/nambka/Prime/badge.svg)
 ![npm](https://img.shields.io/npm/v/npm)
